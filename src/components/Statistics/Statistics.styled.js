@@ -45,12 +45,12 @@ export const Item = styled.li`
 export const Label = styled.span`
   display: block;
   font-size: 14px;
-  color: #666;
+  color: black;
   margin-bottom: 8px;
 `;
 
 export const Percentage = styled.span`
   font-size: 18px;
   font-weight: bold;
-  color: #2a7ae2;
+  color: black;
 `;
