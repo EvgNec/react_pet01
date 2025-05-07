@@ -1,16 +1,18 @@
+import { Container, Title, List, Item, Label, Percentage } from './Statistics.styled.js'
+
 export default function Statistics( {title, stats} ) {
   return (
-    <section className="statistics">
-  <h2 className="title">Upload stats</h2>
+    <Container className="statistics">
+  <Title className="title">Upload stats</Title>
 
-      <ul>
+      <List>
         {stats.map((item) => (
-          <li key={item.id}>
-          <span>{item.label}</span>
-          <span>{item.percentage}</span>
-          </li>
+          <Item key={item.id}>
+          <Label>{item.label}</Label>
+          <Percentage>{item.percentage}</Percentage>
+          </Item>
         ))}
-      </ul>
-</section>
+      </List>
+</Container>
   );
 }
