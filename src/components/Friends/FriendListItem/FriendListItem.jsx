@@ -1,11 +1,13 @@
+import { Item, Status, Avatar, Name } from './FriendListItem.styled.js';
 
-
-export default function Name( {item}) {
-    return ( <>
-      <li className="item" key={item.id}>
-    <span className="status">{item.isOnline}</span>
-    <img className="avatar" src={item.avatar} alt={item.name} width="48" />
-    <p className="name">{item.name}</p>
-  </li>
-    </> );
-  }
+export default function FriendListItem({ item }) {
+  return (
+    <>
+      <Item key={item.id}>
+        <Status $isOnline={item.isOnline}></Status>
+        <Avatar src={item.avatar} alt={item.name} width="48" />
+        <Name>{item.name}</Name>
+      </Item>
+    </>
+  );
+}
