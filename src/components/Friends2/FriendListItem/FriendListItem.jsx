@@ -1,13 +1,13 @@
-import { Item, Status, Avatar, Name } from './FriendListItem.styled.js';
+import css from './FriendListItem.module.css'
 
 export default function FriendListItem({ item }) {
   return (
     <>
-      <Item key={item.id}>
-        <Status $isOnline={item.isOnline}></Status>
-        <Avatar src={item.avatar} alt={item.name} width="48" />
-        <Name>{item.name}</Name>
-      </Item>
+      <li className={css.friendItem} key={item.id}>
+        <span className={`${css.friendStatus} ${item.isOnline ? css.online : css.offline}`}></span>
+        <img className={css.friendAvatar} src={item.avatar} alt={item.name} width="48" />
+        <p className={css.friendName}>{item.name}</p>
+      </li>
     </>
   );
 }
